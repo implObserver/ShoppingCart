@@ -1,0 +1,1 @@
+export { PriceEntity } from './ui/PriceEntity'

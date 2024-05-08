@@ -1,0 +1,8 @@
+:root {
+    --last__price-color: grey;
+}
+
+.last__price {
+    color: var(--last__price-color);
+    text-decoration: line-through;
+}
