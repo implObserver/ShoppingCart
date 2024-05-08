@@ -1,8 +1,8 @@
 import { createContext, useContext } from "react";
 
-export const PriceContext = createContext<undefined | PriceContext>(undefined);
+export const PriceContext = createContext<undefined | PriceContextType>(undefined);
 
-export function usePriceContext() {
+export const usePriceContext = () => {
     const props = useContext(PriceContext);
     if (props === undefined) {
         throw new Error('use this context must be used with a PriceContext');

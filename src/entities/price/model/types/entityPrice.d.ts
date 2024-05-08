@@ -1,4 +1,4 @@
-interface EntityPriceContext {
+interface EntityPriceContextType {
     discount: Boolean,
     price: string,
     discountPrice: string,

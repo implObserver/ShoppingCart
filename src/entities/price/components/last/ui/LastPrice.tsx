@@ -1,12 +1,11 @@
-import { useEntityPriceContext } from "@/entities/price/lib/context/Context";
-import { Price } from "@/shared/ui/price";
-import { PriceContext } from "@/shared/ui/price/lib/context/Context";
+import { Price, PriceContext } from "@/shared/ui/price";
 import styles from '../styles/LastPrice.module.css'
+import { useEntityPriceContext } from "@/entities/price/lib/context/Context";
 
 export const LastPrice = () => {
     const context = useEntityPriceContext();
     const price = context.discount ? context.price : '';
-    const priceContext: PriceContext = {
+    const priceContext: PriceContextType = {
         price: price,
         currency: context.currency
     }
