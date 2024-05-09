@@ -1,0 +1,25 @@
+.heart {
+    display: grid;
+    z-index: 10;
+}
+
+.heart>svg>path:hover {
+    color: rgb(141, 141, 141);
+}
+
+.click {
+    animation-duration: 0.3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

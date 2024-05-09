@@ -1,0 +1,9 @@
+.preview {
+    display: grid;
+    border-radius: min(1vw, 2vh);
+}
+
+.preview>img {
+    border-radius: min(1vw, 2vh);
+    width: 100%;
+}

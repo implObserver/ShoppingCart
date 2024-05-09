@@ -1,0 +1,12 @@
+.container__showcase {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-area: once;
+    justify-self: center;
+    align-self: center;
+}
+
+.container__showcase:hover {
+    color: red;
+}

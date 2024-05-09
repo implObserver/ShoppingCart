@@ -1,0 +1,3 @@
+interface EntityPreviewContextType {
+    url: string,
+}

@@ -1,0 +1,13 @@
+.container__like {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-self: right;
+    grid-area: once;
+    width: 4vh;
+    height: 4vh;
+    padding: 3vh;
+}
+

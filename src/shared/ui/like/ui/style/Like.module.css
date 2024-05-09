@@ -1,0 +1,8 @@
+.like {
+    display: grid;
+
+}
+
+.like>img {
+    color: red;
+}

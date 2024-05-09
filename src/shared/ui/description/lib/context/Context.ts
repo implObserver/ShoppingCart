@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-export const DescriptionContext = createContext<undefined | String>(undefined);
+export const DescriptionContext = createContext<undefined | DescriptionContextType>(undefined);
 
 export const useDescriptionContext = () => {
     const props = useContext(DescriptionContext);

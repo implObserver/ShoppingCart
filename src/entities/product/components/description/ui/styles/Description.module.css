@@ -1,0 +1,10 @@
+.entity__description {
+    display: grid;
+    padding: min(1px, 1vh);
+    border: 1px red solid;
+    font-size: 2.5vh;
+}
+
+.entity__description>span {
+    display: grid;
+}

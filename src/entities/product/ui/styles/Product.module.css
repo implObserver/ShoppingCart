@@ -1,0 +1,6 @@
+.product {
+    display: grid;
+    width: 30vh;
+    height: 45vh;
+    padding: min(5px, 1vh);
+}

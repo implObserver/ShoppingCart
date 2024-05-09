@@ -1,3 +1,6 @@
 .page__main {
     display: grid;
+    width: inherit;
+    height: inherit;
+    padding: 1vw;
 }

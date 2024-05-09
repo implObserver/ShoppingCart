@@ -1,0 +1,14 @@
+{
+    "price": {
+        "discount": true,
+        "price": 25000,
+        "discountPrice": 15650,
+        "currency": "$"
+    },
+    "description": {
+        "description": "Buy comfortable slippers, cheap"
+    },
+    "preview": {
+        "url": "https://static.insales-cdn.com/images/products/1/3903/624971583/x8820gyesla3lvvuclws9548aharz8gj.jpg"
+    }
+}

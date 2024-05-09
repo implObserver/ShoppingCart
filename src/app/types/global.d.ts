@@ -5,3 +5,5 @@ declare module '*.css' {
 
 declare module '*.jpg';
 declare module '*.webp';
+declare module '*.svg';
+declare module '*.json';
