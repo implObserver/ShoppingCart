@@ -14,12 +14,6 @@
       "@/*": [
         "src/*"
       ],
-      "@app/*": [
-        "src/app/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ]
     },
   },
   "include": [

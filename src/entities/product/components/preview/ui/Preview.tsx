@@ -4,29 +4,36 @@ import { ShowCaseContainer } from "../component/showCaseFeatureContainer"
 import { useEntityPreviewContext } from "../lib/context/Context";
 import { PreviewWrapper } from "../component/previewWrapper";
 import styles from './styles/Preview.module.css'
+import { useState } from "react";
+import { ShowCaseContext } from "@/shared/ui/showCase/lib/context/Context";
 
 export const PreviewEntity = ({ children }) => {
-    const like = children[0];
-    const showCase = children[1];
+    const like = children;
     const previewContext = useEntityPreviewContext();
+    const [url, setUrl] = useState(previewContext.urls[0]);
 
     const imageContext: ImgContextType = {
-        url: previewContext.url
+        url
+    }
+
+    const showCaseContext: ShowCaseContextType = {
+        setPreview: setUrl,
+        urls: previewContext.urls
     }
 
     return (
         <div className={styles.entity__preview}>
             <ImageContext.Provider value={imageContext}>
-                <PreviewWrapper></PreviewWrapper>
+                <PreviewWrapper />
             </ImageContext.Provider>
 
             <LikeContainer>
                 {like}
             </LikeContainer>
 
-            <ShowCaseContainer>
-                {showCase}
-            </ShowCaseContainer>
+            <ShowCaseContext.Provider value={showCaseContext}>
+                <ShowCaseContainer />
+            </ShowCaseContext.Provider>
         </div>
     )
 }

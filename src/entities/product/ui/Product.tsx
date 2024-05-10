@@ -9,10 +9,6 @@ export const Product = ({ children }) => {
     const previewContext = context.preview;
     const priceContext = context.price;
     const descriptionContext = context.description;
-    
-    const handleClic = () => {
-        console.log('product')
-    }
 
     return (
         <div className={styles.product}>

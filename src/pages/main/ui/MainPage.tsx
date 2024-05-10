@@ -11,7 +11,6 @@ export const MainPage = () => {
             <ProductContext.Provider value={example}>
                 <Product>
                     <Like></Like>
-                    <ShowCase></ShowCase>
                 </Product>
             </ProductContext.Provider>
         </div>

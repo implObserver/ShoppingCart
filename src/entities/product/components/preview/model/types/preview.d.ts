@@ -1,3 +1,3 @@
 interface EntityPreviewContextType {
-    url: string,
+    urls: Array<string>,
 }
