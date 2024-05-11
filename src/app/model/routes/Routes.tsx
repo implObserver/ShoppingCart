@@ -1,6 +1,4 @@
 import { ProductPage } from "@/pages/product";
-import { WithRedux } from "./WithRedux";
-import App from "../App";
 import { FavouritePage } from "@/pages/favourites";
 import { MainPage } from "@/pages/main";
 import { CartPage } from "@/pages/cart";

@@ -11,7 +11,7 @@ interface DescriptionContextType {
     description: string,
 }
 
-interface ShowCaseContextType {
+interface ImageShowcaseContextType {
     setPreview: React.Dispatch<React.SetStateAction<string>>,
     urls: Array<string>,
 }

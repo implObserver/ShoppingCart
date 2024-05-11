@@ -5,7 +5,7 @@ import { useEntityPreviewContext } from "../lib/context/Context";
 import { PreviewWrapper } from "../component/previewWrapper";
 import styles from './styles/Preview.module.css'
 import { useState } from "react";
-import { ShowCaseContext } from "@/shared/ui/showCase/lib/context/Context";
+import { ShowCaseContext } from "@/shared/ui/imageShowcase";
 
 export const PreviewEntity = ({ children }) => {
     const like = children;
@@ -16,7 +16,7 @@ export const PreviewEntity = ({ children }) => {
         url
     }
 
-    const showCaseContext: ShowCaseContextType = {
+    const showCaseContext: ImageShowcaseContextType = {
         setPreview: setUrl,
         urls: previewContext.urls
     }

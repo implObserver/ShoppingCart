@@ -11,7 +11,6 @@ export const Segment = () => {
     return (
         <div className={styles.segment}
             onMouseEnter={handleHover}>
-
         </div>
     )
 }

@@ -1,14 +1,18 @@
+import { useLocalStorage } from "@/shared/lib/hooks/useLocalStorage";
 import { Segment, SegmentContext } from "../components/segment";
-import { useShowCaseContext } from "../lib/context/Context"
+import { useImageShowcaseContext } from "../lib/context/Context"
 import styles from './styles/ShowCase.module.css'
 
-export const ShowCase = () => {
-    const context = useShowCaseContext();
+export const Showcase = () => {
+    const context = useImageShowcaseContext();
     const urls = context.urls;
+
+    const handleLeave = () => {
+        context.setPreview(urls[0]);
+    }
 
     const fill = () => {
         return urls.map((url, index) => {
-
             const segmentContext: SegmentContextType = {
                 url,
                 setPreview: context.setPreview
@@ -21,9 +25,12 @@ export const ShowCase = () => {
             )
         })
     }
-    
+
     return (
-        <div className={styles.showcase}>
+        <div
+            className={styles.showcase}
+            onMouseLeave={handleLeave}
+        >
             {fill()}
         </div>
     )

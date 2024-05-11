@@ -1,6 +1,5 @@
 .entity__price {
     display: flex;
     padding: min(1px, 1vh);
-    border: 1px red solid;
     font-size: 4vh;
 }
