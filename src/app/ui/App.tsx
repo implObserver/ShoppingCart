@@ -4,12 +4,6 @@ import styles from './styles/App.module.css';
 import { useEffect } from 'react';
 
 export const App = () => {
-  const { setItem } = useLocalStorage('ShoppingCart');
-
-  useEffect(() => {
-    setItem({});
-  }, [])
-
   return (
     <>
       <div className={styles.app}>

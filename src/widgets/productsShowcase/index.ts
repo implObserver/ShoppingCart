@@ -1,0 +1,1 @@
+export { ProductsShowcase } from './ui/ProductsShowcase'
