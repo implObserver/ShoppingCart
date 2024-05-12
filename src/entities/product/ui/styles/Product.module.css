@@ -1,6 +1,7 @@
 .product {
     display: grid;
-    width: 30vh;
-    height: 45vh;
-    padding: min(5px, 1vh);
+    width: min-content;
+    padding: max(1vh, 1px);
+    justify-items: center;
+    justify-content: center;
 }

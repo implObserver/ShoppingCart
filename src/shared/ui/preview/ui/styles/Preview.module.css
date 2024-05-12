@@ -1,9 +1,14 @@
 .preview {
-    display: grid;
-    border-radius: min(1vw, 2vh);
+    display: flex;
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    justify-items: center;
 }
 
 .preview>img {
-    border-radius: min(1vw, 2vh);
-    width: 100%;
+    display: grid;
+    height:inherit;
+    width: inherit;
+    object-fit: contain;
 }

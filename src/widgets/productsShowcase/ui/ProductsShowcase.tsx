@@ -1,6 +1,7 @@
 import { ProductContext } from "@/entities/product"
 import examples from '../../../shared/lib/productExample/products.json'
 import { ProductWidget } from "../components/product"
+import styles from './styles/ProductShowcase.module.css'
 
 export const ProductsShowcase = () => {
     const fill = () => {
@@ -15,7 +16,7 @@ export const ProductsShowcase = () => {
     }
 
     return (
-        <div>
+        <div className={styles.showcase__product}>
             {fill()}
         </div>
     )

@@ -12,9 +12,9 @@ export const Showcase = () => {
     }
 
     const fill = () => {
-        return urls.map((url, index) => {
+        return urls.map((urls, index) => {
             const segmentContext: SegmentContextType = {
-                url,
+                urls,
                 setPreview: context.setPreview
             }
 

@@ -1,10 +1,14 @@
+:root {
+    --color__border: #8d8d8d;
+}
+
 .heart {
     display: grid;
     z-index: 10;
 }
 
 .heart>svg>path:hover {
-    color: rgb(141, 141, 141);
+    color: var(--color__border);
 }
 
 .click {
@@ -16,9 +20,11 @@
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }

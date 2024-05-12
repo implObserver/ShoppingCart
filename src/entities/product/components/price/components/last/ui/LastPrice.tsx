@@ -1,5 +1,5 @@
 import { Price, PriceContext } from "@/shared/ui/price";
-import styles from '../styles/LastPrice.module.css'
+import styles from './styles/LastPrice.module.css'
 import { useEntityPriceContext } from "../../../lib/context/Context";
 
 export const LastPrice = () => {

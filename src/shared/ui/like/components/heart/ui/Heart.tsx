@@ -4,8 +4,8 @@ import styles from './styles/Heart.module.css'
 export const Heart = () => {
     const [click, setClick] = useState(false);
 
-    const color = click ? "rgb(248, 65, 65)" : "rgb(189, 189, 188)";
-    const fill = click ? "rgb(248, 65, 65)" : "#fff";
+    const color = click ? "#f84141" : "#bdbdbc";
+    const fill = click ? "#f84141" : "#fff";
 
     const handleClick = (e) => {
         setClick(!click);
@@ -19,9 +19,8 @@ export const Heart = () => {
                 id="wishlist"
                 viewBox="0 0 22 21"
                 xmlns="http://www.w3.org/2000/svg"
-                width="4vh"
-                height="4vh"
-                className="_3xacK"
+                width="max(3vh,20px)"
+                height="max(3vh,20px)"
                 style={{
                     color: color
                 }}>

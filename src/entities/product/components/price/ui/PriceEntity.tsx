@@ -15,7 +15,9 @@ export const PriceEntity = () => {
         )
     } else {
         return (
-            <span><ActualPrice></ActualPrice></span>
+            <span className={styles.entity__price}>
+                <ActualPrice></ActualPrice>
+            </span>
         )
     }
 }

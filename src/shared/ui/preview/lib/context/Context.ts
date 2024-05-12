@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-export const ImageContext = createContext<undefined | ImgContextType>(undefined);
+export const ImageContext = createContext<undefined | ImageContextType>(undefined);
 
 export const useImageContext = () => {
     const props = useContext(ImageContext);

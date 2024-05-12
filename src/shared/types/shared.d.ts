@@ -3,8 +3,8 @@ interface PriceContextType {
     currency: string,
 }
 
-interface ImgContextType {
-    url: string,
+interface ImageContextType {
+    urls: PreviewUrls,
 }
 
 interface DescriptionContextType {
@@ -12,11 +12,16 @@ interface DescriptionContextType {
 }
 
 interface ImageShowcaseContextType {
-    setPreview: React.Dispatch<React.SetStateAction<string>>,
-    urls: Array<string>,
+    setPreview: React.Dispatch<React.SetStateAction<PreviewUrls>>,
+    urls: Array<PreviewUrls>,
 }
 
 interface SegmentContextType {
-    setPreview: React.Dispatch<React.SetStateAction<string>>,
+    setPreview: React.Dispatch<React.SetStateAction<PreviewUrls>>,
+    urls: PreviewUrls,
+}
+
+interface PreviewUrls {
     url: string,
+    srcSet: Array<string>
 }

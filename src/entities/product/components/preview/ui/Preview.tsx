@@ -10,14 +10,14 @@ import { ShowCaseContext } from "@/shared/ui/imageShowcase";
 export const PreviewEntity = ({ children }) => {
     const like = children;
     const previewContext = useEntityPreviewContext();
-    const [url, setUrl] = useState(previewContext.urls[0]);
+    const [urls, setUrls] = useState(previewContext.urls[0]);
 
-    const imageContext: ImgContextType = {
-        url
+    const imageContext: ImageContextType = {
+        urls
     }
 
     const showCaseContext: ImageShowcaseContextType = {
-        setPreview: setUrl,
+        setPreview: setUrls,
         urls: previewContext.urls
     }
 

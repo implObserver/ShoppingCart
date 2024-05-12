@@ -8,10 +8,10 @@
     color: var(--base__price-color);
 }
 
-.dicount__price {
+.discount__price {
     color: var(--dicount__price-color);
 }
 
-.discount__price-hight {
+.discount__price__hight {
     color: var(--dicount-high__price-color);
 }

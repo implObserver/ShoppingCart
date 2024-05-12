@@ -4,10 +4,8 @@ export const ImageShowcaseContext = createContext<undefined | ImageShowcaseConte
 
 export const useImageShowcaseContext = () => {
     const props = useContext(ImageShowcaseContext);
-
     if (props === undefined) {
         throw new Error('use this context must be used with a ImageShowcaseContext');
     }
-    
     return props;
 }

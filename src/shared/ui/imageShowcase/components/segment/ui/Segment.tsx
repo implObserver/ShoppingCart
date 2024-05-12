@@ -5,7 +5,7 @@ export const Segment = () => {
     const context = useSegmentContext();
 
     const handleHover = () => {
-        context.setPreview(context.url);
+        context.setPreview(context.urls);
     }
 
     return (
