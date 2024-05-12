@@ -11,7 +11,6 @@ export const PreviewEntity = ({ children }) => {
     const like = children;
     const previewContext = useEntityPreviewContext();
     const [urls, setUrls] = useState(previewContext.urls[0]);
-
     const imageContext: ImageContextType = {
         urls
     }

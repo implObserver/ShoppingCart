@@ -3,9 +3,9 @@ import examples from '../../../shared/lib/productExample/products.json'
 import { ProductWidget } from "../components/product"
 import styles from './styles/ProductShowcase.module.css'
 
-export const ProductsShowcase = () => {
+export const ProductsShowcase = ({products}) => {
+    console.log(products)
     const fill = () => {
-        const products = Object.values(examples);
         return products.map((example: ProductContextType, index) => {
             return (
                 <ProductContext.Provider key={index} value={example}>

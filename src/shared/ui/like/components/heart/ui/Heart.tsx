@@ -1,15 +1,11 @@
-import { useState } from 'react'
 import styles from './styles/Heart.module.css'
+import { useLikeContext } from '../../../lib/context/Context';
 
 export const Heart = () => {
-    const [click, setClick] = useState(false);
+    const status = useLikeContext();
 
-    const color = click ? "#f84141" : "#bdbdbc";
-    const fill = click ? "#f84141" : "#fff";
-
-    const handleClick = (e) => {
-        setClick(!click);
-    }
+    const color = status ? "#f84141" : "#bdbdbc";
+    const fill = status ? "#f84141" : "#fff";
 
     return (
         <div
@@ -34,7 +30,7 @@ export const Heart = () => {
                     stroke="currentColor"
                     fill={fill}
                     strokeWidth="2"
-                    onClick={handleClick}>
+                    >
                 </path>
             </svg>
         </div >

@@ -10,7 +10,6 @@ export const Product = ({ children }) => {
     const priceContext = context.price;
     const descriptionContext = context.description;
 
-    console.log(context)
     return (
         <div className={styles.product}>
             <EntityPreviewContext.Provider value={previewContext}>

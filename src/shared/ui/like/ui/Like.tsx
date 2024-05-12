@@ -5,6 +5,6 @@ export const Like = () => {
     return (
         <div className={styles.like}>
             <Heart></Heart>
-        </div >
+        </div>
     )
 }
