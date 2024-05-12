@@ -7,7 +7,7 @@ import { useLocalStorage } from "@/shared/lib/hooks/useLocalStorage";
 export const AddToFavorites = () => {
     const context = useProductContext();
     const { getItem, setItem } = useLocalStorage(`${context.id}`);
-    const [status, setStatus] = useState(getItem() ? getItem() : false);;
+    const [status, setStatus] = useState(getItem());;
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const element = e.target as HTMLElement;
@@ -15,6 +15,7 @@ export const AddToFavorites = () => {
             setItem(!status);
             setStatus(!status);
             addToFavorites(status, context);
+
         }
     }
 

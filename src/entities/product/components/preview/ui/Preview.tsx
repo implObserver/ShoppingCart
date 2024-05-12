@@ -1,4 +1,4 @@
-import { ImageContext, Preview } from "@/shared/ui/preview"
+import { ImageContext } from "@/shared/ui/preview"
 import { LikeContainer } from "../component/likeFeatureContainer"
 import { ShowCaseContainer } from "../component/showCaseFeatureContainer"
 import { useEntityPreviewContext } from "../lib/context/Context";

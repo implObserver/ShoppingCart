@@ -9,7 +9,6 @@ export const Heart = () => {
 
     return (
         <div
-            key={Math.random()}
             className={`${styles.heart} ${styles.click}`}>
             <svg aria-hidden="true"
                 id="wishlist"

@@ -1,14 +1,12 @@
 import { ProductContext } from "@/entities/product"
-import examples from '../../../shared/lib/productExample/products.json'
 import { ProductWidget } from "../components/product"
 import styles from './styles/ProductShowcase.module.css'
 
-export const ProductsShowcase = ({products}) => {
-    console.log(products)
+export const ProductsShowcase = ({ products }) => {
     const fill = () => {
-        return products.map((example: ProductContextType, index) => {
+        return products.map((example: ProductContextType) => {
             return (
-                <ProductContext.Provider key={index} value={example}>
+                <ProductContext.Provider key={example.id} value={example}>
                     <ProductWidget></ProductWidget>
                 </ProductContext.Provider>
             )

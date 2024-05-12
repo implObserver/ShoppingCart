@@ -5,7 +5,7 @@ export const ImageContext = createContext<undefined | ImageContextType>(undefine
 export const useImageContext = () => {
     const props = useContext(ImageContext);
     if (props === undefined) {
-        throw new Error('use this context must be used with a ImgContext');
+        throw new Error('use this context must be used with a ImageContext');
     }
     return props;
 }

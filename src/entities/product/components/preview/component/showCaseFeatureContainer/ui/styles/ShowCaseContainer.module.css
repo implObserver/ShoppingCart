@@ -6,7 +6,3 @@
     justify-self: center;
     align-self: center;
 }
-
-.container__showcase:hover {
-    color: red;
-}

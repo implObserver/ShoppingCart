@@ -7,4 +7,5 @@ export const addToFavorites = (status: boolean, context: ProductContextType) => 
     } else {
         store.dispatch(favoritesActions.removeFavorite(context))
     }
+    store.dispatch(favoritesActions.saveToLocalStorage());
 }

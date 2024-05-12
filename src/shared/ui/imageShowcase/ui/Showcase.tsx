@@ -1,4 +1,3 @@
-import { useLocalStorage } from "@/shared/lib/hooks/useLocalStorage";
 import { Segment, SegmentContext } from "../components/segment";
 import { useImageShowcaseContext } from "../lib/context/Context"
 import styles from './styles/ShowCase.module.css'

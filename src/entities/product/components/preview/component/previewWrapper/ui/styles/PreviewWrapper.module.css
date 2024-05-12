@@ -1,3 +1,7 @@
+:root {
+    --background-color__wrapper__preview: #f8f7f5;
+}
+
 .wrapper__preview {
     display: grid;
     grid-area: once;
@@ -9,7 +13,7 @@
     justify-items: center;
     align-items: center;
     align-content: center;
-    background-color: #f8f7f5;
+    background-color: var(--background-color__wrapper__preview);
     border-radius: max(2vh, 15px);
     overflow: hidden;
 }
