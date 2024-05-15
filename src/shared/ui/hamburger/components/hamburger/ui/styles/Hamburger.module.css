@@ -1,5 +1,5 @@
 :root {
-    --hamburger__bar-width: 24px;
+    --hamburger__bar-width: 20px;
     --hamburger__bar-height: 3px;
     --hamburger__gap: 5px;
     --hamburger__foreground: #333;
@@ -13,5 +13,11 @@
 .hamburger__menu {
     display: flex;
     flex-direction: column;
-    row-gap: var(--hamburger__gap);
+    max-width: 100px;
+    gap: var(--hamburger__gap);
+    transition: all 0.3s ease-in-out;
+}
+
+.open {
+    width: var(--hamburder__height);
 }

@@ -1,23 +1,23 @@
 .modal {
     display: grid;
-    width: 100%;
-    height: 100%;
     background-color: red;
     opacity: 1;
+    z-index: 2;
 }
 
 .open {
-    animation-duration: 1s;
+    animation-duration: 500ms;
     animation-name: open;
 }
 
 .close {
-    animation-duration: 1s;
+    animation-duration: 500ms;
     animation-name: close;
 }
 
 @keyframes open {
     0% {
+        z-index: 0;
         opacity: 0;
         height: 80%;
     }

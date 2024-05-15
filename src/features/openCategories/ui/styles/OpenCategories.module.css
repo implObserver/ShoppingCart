@@ -1,4 +1,4 @@
 .container__feature__hamburger {
     display: grid;
-    border: 1px red solid;
+    z-index: 2;
 }
