@@ -4,7 +4,9 @@
 
 .heart {
     display: grid;
-    z-index: 10;
+    z-index: 3;
+    animation-duration: 0.3s;
+    animation-name: slidein;
 }
 
 .heart>svg>path:hover {

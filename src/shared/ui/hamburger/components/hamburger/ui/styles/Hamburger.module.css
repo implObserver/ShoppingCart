@@ -1,0 +1,17 @@
+:root {
+    --hamburger__bar-width: 24px;
+    --hamburger__bar-height: 3px;
+    --hamburger__gap: 5px;
+    --hamburger__foreground: #333;
+    --hamburger__background: white;
+    --hamburger__animation-timing: 200ms;
+    --hamburder__height: calc(var(--hamburger__bar-height)*3 + var(--hamburger__gap) *2);
+    --sqrt2: 1.41421356237;
+    --hamburder__line-width: calc(var(--hamburder__height) * var(--sqrt2));
+}
+
+.hamburger__menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--hamburger__gap);
+}

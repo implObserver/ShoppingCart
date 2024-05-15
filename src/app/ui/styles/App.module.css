@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+:root {
+  --color__main-theme: #95d8e0;
+}
+
 .app {
   display: grid;
   width: 100%;

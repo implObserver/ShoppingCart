@@ -3,19 +3,19 @@ import { addToFavorites } from "../api/addToFavorites";
 import { useProductContext } from "@/entities/product";
 import { Like, LikeContext } from "@/shared/ui/like";
 import { useLocalStorage } from "@/shared/lib/hooks/useLocalStorage";
+import { getFavouriteStatus } from "../api/localStorage/getFavouriteStatus";
+import { setFavouriteStatus } from "../api/localStorage/setFavouriteStatus";
 
 export const AddToFavorites = () => {
     const context = useProductContext();
-    const { getItem, setItem } = useLocalStorage(`${context.id}`);
-    const [status, setStatus] = useState(getItem());;
+    const [status, setStatus] = useState(getFavouriteStatus(context.id));
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const element = e.target as HTMLElement;
         if (element.tagName === 'path') {
-            setItem(!status);
+            setFavouriteStatus(context.id, !status);
             setStatus(!status);
             addToFavorites(status, context);
-
         }
     }
 

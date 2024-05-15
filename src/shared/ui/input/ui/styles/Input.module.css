@@ -1,0 +1,12 @@
+.container__input {
+    appearance: none;
+    width: max-content;
+    height: max(35px, 4.5vh);
+    border: 2px var(--color__main-theme) solid;
+    border-radius: min(1vh, 1vw) 0 0 min(1vh, 1vw);
+    overflow: hidden;
+}
+
+.container__input>input {
+    width: 45vh;
+}

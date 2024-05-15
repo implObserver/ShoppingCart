@@ -1,0 +1,8 @@
+.menu__top {
+    display: grid;
+    background-color: rgb(198, 242, 255);
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

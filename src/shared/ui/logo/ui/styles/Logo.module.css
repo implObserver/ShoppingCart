@@ -1,0 +1,9 @@
+.logo {
+    height: 100%;
+}
+
+.logo>img {
+    width: 25vh;
+    height: 100%;
+    min-width: 260px;
+}

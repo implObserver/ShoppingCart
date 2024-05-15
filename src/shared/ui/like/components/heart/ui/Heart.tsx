@@ -2,13 +2,14 @@ import styles from './styles/Heart.module.css'
 import { useLikeContext } from '../../../lib/context/Context';
 
 export const Heart = () => {
-    const status = useLikeContext();
+    const context = useLikeContext();
 
-    const color = status ? "#f84141" : "#bdbdbc";
-    const fill = status ? "#f84141" : "#fff";
+    const color = context ? "#f84141" : "#bdbdbc";
+    const fill = context ? "#f84141" : "#fff";
 
     return (
         <div
+            key={Math.random()}
             className={`${styles.heart} ${styles.click}`}>
             <svg aria-hidden="true"
                 id="wishlist"
@@ -29,7 +30,7 @@ export const Heart = () => {
                     stroke="currentColor"
                     fill={fill}
                     strokeWidth="2"
-                    >
+                >
                 </path>
             </svg>
         </div >

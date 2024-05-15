@@ -1,0 +1,5 @@
+.top__line {
+    width: var(--hamburger__bar-width);
+    height: var(--hamburger__bar-height);
+    background-color: black;
+}

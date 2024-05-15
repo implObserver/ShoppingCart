@@ -25,3 +25,11 @@ interface PreviewUrls {
     url: string,
     srcSet: Array<string>
 }
+
+interface LogoContextType {
+    logo: string
+}
+
+interface TextInputContextType {
+    setValue: React.Dispatch<React.SetStateAction<string>>,
+}

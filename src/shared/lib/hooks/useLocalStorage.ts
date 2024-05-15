@@ -7,10 +7,10 @@ export const useLocalStorage = (key: string) => {
         }
     }
 
-    const getItem = () => {
+    const getItem = (pass = undefined) => {
         try {
             const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : undefined;
+            return item ? JSON.parse(item) : pass;
         } catch (error) {
             console.log(error)
         }
