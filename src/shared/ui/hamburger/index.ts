@@ -1,1 +1,2 @@
-export { Container as Hamburger } from './ui/Container'
+export { Hamburger } from './ui/Hamburger'
+export { HamburgerContext } from './lib/context/Context'

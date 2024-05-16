@@ -1,1 +1,0 @@
-export { OpenCategories } from './ui/OpenCategories'

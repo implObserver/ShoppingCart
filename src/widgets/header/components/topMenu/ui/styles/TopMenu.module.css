@@ -1,8 +1,7 @@
 .menu__top {
     display: grid;
-    background-color: rgb(198, 242, 255);
-    height: 5vh;
-    width: 100%;
+    height: max(50px, 5vh);
     justify-content: center;
     align-items: center;
+    background-color: antiquewhite;
 }

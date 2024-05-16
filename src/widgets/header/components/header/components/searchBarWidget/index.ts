@@ -1,1 +1,0 @@
-export { SearchBarWidget } from './ui/SearchBarWidget'

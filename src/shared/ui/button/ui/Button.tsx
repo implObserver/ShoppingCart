@@ -1,10 +1,10 @@
 import styles from './styles/Button.module.css'
 
-export const Button = () => {
+export const Button = ({ name }) => {
     return (
         <div className={styles.button}>
             <button>
-                Найти
+                <span>{name}</span>
             </button>
         </div>
     )

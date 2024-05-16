@@ -1,0 +1,15 @@
+.wrapper__bar__header {
+    z-index: 5;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+.light {
+    transition: box-shadow 100ms 400ms ease-in-out;
+    box-shadow: 0 0 0 max(10000vh, 100vh) rgba(0, 0, 0, .3);
+}

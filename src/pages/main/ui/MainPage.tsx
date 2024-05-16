@@ -1,8 +1,8 @@
 import styles from '../styles/MainPage.module.css'
 import { ProductsShowcase } from '@/widgets/productsShowcase';
-import examples from '../../../shared/lib/productExample/products.json'
 import { Link } from 'react-router-dom';
 import { Header } from '@/widgets/header';
+import { examples } from '@/shared/lib';
 
 export const MainPage = () => {
     const products = Object.values(examples);

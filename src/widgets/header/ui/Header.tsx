@@ -1,12 +1,13 @@
-import { HeaderMenu } from "../components/header"
+import { HeaderBar } from "../components/headerBar"
 import { Promo } from "../components/promo"
 import { TopMenu } from "../components/topMenu"
+import styles from './styles/Header.module.css'
 
 export const Header = () => {
     return (
-        <div>
+        <div className={styles.header}>
             <Promo></Promo>
-            <HeaderMenu></HeaderMenu>
+            <HeaderBar></HeaderBar>
             <TopMenu></TopMenu>
         </div>
     )

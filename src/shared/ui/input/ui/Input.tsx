@@ -10,7 +10,7 @@ export const Input = () => {
 
     return (
         <div className={styles.container__input}>
-            <input type="text" onInput={inputHandle} />
+            <input type="text" onInput={inputHandle} placeholder='Искать товары' />
         </div>
     )
 }

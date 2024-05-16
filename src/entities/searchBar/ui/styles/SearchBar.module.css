@@ -1,3 +1,4 @@
 .search__bar {
     display: flex;
+    gap: 5px;
 }

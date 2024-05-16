@@ -6,7 +6,7 @@ export const SearchPanel = () => {
     return (
         <div className={styles.panel__search}>
             <Input></Input>
-            <Button></Button>
+            <Button name={"Найти"}></Button>
         </div>
     )
 }
