@@ -1,12 +1,10 @@
-import { substringIncludes, useCustomState } from "@/shared/lib";
+import { useCustomState } from "@/shared/lib";
 import { Bar } from "../components/bar/ui/Bar"
 import { DropDownContainer } from "../components/dropDownContainer/ui/DropDownContainer"
-import { useEffect, useRef } from "react";
-import { HamburgerContext } from "@/shared/ui/hamburger";
 import { DropdownContext } from "@/shared/ui/dropdown";
 import styles from './styles/Header.module.css'
-import { DropdownElement } from "@/features/dropdownElement/ui/DropdownElement";
-import { TriggerContext } from "@/features/hamburgerTrigger/lib/context/Context";
+import { DropdownElement } from "@/features/dropdownElement";
+import { TriggerContext } from "@/features/hamburgerTrigger";
 
 export const HeaderBar = () => {
     const dropdownStatus = useCustomState();
