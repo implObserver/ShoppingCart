@@ -1,12 +1,14 @@
 .container__result {
     display: grid;
     background-color: white;
+    z-index: 20;
+    border: 1px black solid;
+    border-radius: 7px;
 }
 
 .container__result>ul {
     appearance: none;
     list-style: none;
-    border-top: 1px solid #999;
     padding: 15px 10px;
 }
 

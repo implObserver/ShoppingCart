@@ -1,18 +1,30 @@
 .container__input {
+    display: grid;
     appearance: none;
+    align-items: center;
     width: max-content;
     height: 35px;
     border: 2px var(--color__main-theme) solid;
-    border-radius: 7px 0 0 7px;
-    z-index: 10;
-    
+    border-radius: 7px;
+    gap: 10px;
+    z-index: 100;
 }
 
 .container__input>input {
     appearance: none;
     outline: none;
     width: 300px;
-    height: 100%;
-    padding: 7px;
-    border-radius: 7px 0 0 7px;
+    height: 32px;
+    padding-left: 10px;
+    border-radius: 7px;
+}
+
+.container__input:focus-within {
+    transition: border 100ms 400ms ease-in-out;
+    border: 2px white solid;
+}
+
+.container__input:focus-within > div {
+    transition: border 100ms 400ms ease-in-out;
+    border: 1px white solid;
 }

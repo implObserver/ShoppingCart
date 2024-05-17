@@ -5,7 +5,8 @@ import styles from './styles/HamburgerTrigger.module.css'
 export const HamburgerTrigger = () => {
     const context = useTriggerContext();
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.stopPropagation();
         context.toggle();
     }
 

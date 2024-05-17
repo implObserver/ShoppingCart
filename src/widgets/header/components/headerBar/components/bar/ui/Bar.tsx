@@ -1,16 +1,15 @@
 import { LogoEntity } from "@/entities/logoEntity"
-import { SearchBar } from "@/entities/searchBar"
 import styles from './styles/Bar.module.css'
 import { HamburgerTrigger } from "@/features/hamburgerTrigger"
+import { SearchPanelContainer } from "../components/searchPanelContainer"
 
 export const Bar = () => {
     return (
         <div>
             <div className={styles.bar}>
-                <LogoEntity></LogoEntity>
-                <SearchBar>
-                    <HamburgerTrigger></HamburgerTrigger>
-                </SearchBar>
+                <LogoEntity />
+                <HamburgerTrigger></HamburgerTrigger>
+                <SearchPanelContainer></SearchPanelContainer>
             </div>
         </div>
     )

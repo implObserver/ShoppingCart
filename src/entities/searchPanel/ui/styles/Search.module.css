@@ -1,3 +1,4 @@
 .panel__search {
     display: flex;
+    border-radius: 7px;
 }

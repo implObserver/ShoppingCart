@@ -1,6 +1,6 @@
 .menu__top {
     display: grid;
-    height: max(50px, 5vh);
+    height: 50px;
     justify-content: center;
     align-items: center;
     background-color: antiquewhite;
