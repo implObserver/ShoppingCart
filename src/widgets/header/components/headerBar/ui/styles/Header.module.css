@@ -1,12 +1,6 @@
-.wrapper__bar__header {
-    z-index: 5;
-}
-
-.header {
+.bar__header {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
 }
 
 .light {

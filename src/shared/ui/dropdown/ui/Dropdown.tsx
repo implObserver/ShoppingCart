@@ -8,9 +8,7 @@ export const Dropdown = ({ children }) => {
         <div className={styles.dropdown}>
             <div className={`${styles.content} ${status ? styles.open : ''}`}>
                 {children}
-                <div className={styles.background}>
-
-                </div>
+                <div className={`${styles.background} dropdown__close`}></div>
             </div>
         </div>
     )

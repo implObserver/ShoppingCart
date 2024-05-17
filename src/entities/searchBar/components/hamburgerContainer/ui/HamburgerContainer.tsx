@@ -1,10 +1,10 @@
 import { Hamburger } from '@/shared/ui/hamburger'
 import styles from './styles/HamburgerContainer.module.css'
 
-export const HamburgerContainer = () => {
+export const HamburgerContainer = ({ children }) => {
     return (
         <div className={styles.container__hamburger}>
-            <Hamburger></Hamburger>
+            {children}
         </div>
     )
 }

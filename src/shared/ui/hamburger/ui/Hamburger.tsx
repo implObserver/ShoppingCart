@@ -7,10 +7,12 @@ import { useHamburgerContext } from '../lib/context/Context';
 export const Hamburger = () => {
     const status = useHamburgerContext();
     return (
-        <div className={`${styles.hamburger__menu} ${status ? styles.open : ''}`}>
-            <TopLine></TopLine>
-            <CenterLine></CenterLine>
-            <BottomLine></BottomLine>
+        <div className={styles.container}>
+            <div className={`${styles.hamburger__menu} ${status ? styles.open : ''}`}>
+                <TopLine></TopLine>
+                <CenterLine></CenterLine>
+                <BottomLine></BottomLine>
+            </div>
         </div>
     )
 }

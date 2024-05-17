@@ -1,0 +1,21 @@
+.container__result {
+    display: grid;
+    background-color: white;
+}
+
+.container__result>ul {
+    appearance: none;
+    list-style: none;
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+}
+
+.container__result>ul>li {
+    border-radius: 7px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.container__result>ul>li:hover {
+    background: #e9f3ff;
+}

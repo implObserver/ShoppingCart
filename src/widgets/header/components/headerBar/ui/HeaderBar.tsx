@@ -1,42 +1,29 @@
-import styles from './styles/HeaderBar.module.css'
-import { LogoEntity } from '@/entities/logoEntity'
-import { Dropdown, DropdownContext } from '@/shared/ui/dropdown'
-import { HamburgerContext } from '@/shared/ui/hamburger'
-import { substringIncludes, useCustomState } from '@/shared/lib'
-import { SearchBar } from '@/entities/searchBar'
+import { substringIncludes, useCustomState } from "@/shared/lib";
+import { Bar } from "../components/bar/ui/Bar"
+import { DropDownContainer } from "../components/dropDownContainer/ui/DropDownContainer"
+import { useEffect, useRef } from "react";
+import { HamburgerContext } from "@/shared/ui/hamburger";
+import { DropdownContext } from "@/shared/ui/dropdown";
+import styles from './styles/Header.module.css'
+import { DropdownElement } from "@/features/dropdownElement/ui/DropdownElement";
+import { TriggerContext } from "@/features/hamburgerTrigger/lib/context/Context";
 
 export const HeaderBar = () => {
     const dropdownStatus = useCustomState();
 
-    const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        const element = e.target as HTMLElement;
-        const includes = substringIncludes(element.className, 'hamburger', 'background')
-        if (includes) {
-            dropdownStatus.toggle();
-        }
-    }
-
     return (
-        <div className={`${styles.wrapper__bar__header} ${dropdownStatus.getState() ? styles.light : ''}`}
-            onClick={handleClick}>
+        <DropdownElement status={dropdownStatus}>
+            <div className={`${styles.bar__header} ${dropdownStatus.getState() ? styles.light : ''}`}>
 
-            <div className={styles.header}>
-                <HamburgerContext.Provider value={dropdownStatus.getState()}>
-                    <LogoEntity></LogoEntity>
-                    <SearchBar></SearchBar>
-                </HamburgerContext.Provider>
+                <TriggerContext.Provider value={dropdownStatus}>
+                    <Bar></Bar>
+                </TriggerContext.Provider>
+
+                <DropdownContext.Provider value={dropdownStatus.getState()}>
+                    <DropDownContainer></DropDownContainer>
+                </DropdownContext.Provider>
+
             </div>
-
-            <DropdownContext.Provider value={dropdownStatus.getState()}>
-                <Dropdown>
-                    <div className="settings" style={{
-                        display: "grid",
-                        height: '50vh',
-                        backgroundColor: 'green',
-                    }}>
-                    </div>
-                </Dropdown>
-            </DropdownContext.Provider>
-        </div>
+        </DropdownElement>
     )
 }

@@ -10,6 +10,17 @@
     --hamburder__line-width: calc(var(--hamburder__height) * var(--sqrt2));
 }
 
+.container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 7px;
+    width: 40px;
+    height: 35px;
+    background-color: var(--color__main-theme);
+}
+
 .hamburger__menu {
     display: flex;
     flex-direction: column;

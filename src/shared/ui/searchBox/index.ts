@@ -1,2 +1,2 @@
 export { TextInputContext, useTextInputContext } from './lib/context/Context'
-export { Input } from './ui/Input'
+export { SearchBox } from './ui/SearchBox'

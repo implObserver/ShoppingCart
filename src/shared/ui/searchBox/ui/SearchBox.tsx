@@ -1,7 +1,8 @@
+import { ResultBox } from "../components/resultBox/ui/ResultBox"
 import { useTextInputContext } from "../lib/context/Context"
 import styles from './styles/Input.module.css'
 
-export const Input = () => {
+export const SearchBox = () => {
     //const context = useTextInputContext();
 
     const inputHandle = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -11,6 +12,7 @@ export const Input = () => {
     return (
         <div className={styles.container__input}>
             <input type="text" onInput={inputHandle} placeholder='Искать товары' />
+            <ResultBox></ResultBox>
         </div>
     )
 }
