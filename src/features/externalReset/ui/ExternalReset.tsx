@@ -9,15 +9,14 @@ export const ExternalReset = ({ state, children }) => {
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             const element = e.target as HTMLElement;
-            console.log(externalElementRef.current)
-            console.log(element)
             if (!externalElementRef.current.contains(element)
                 || element.className.includes('plug')) {
                 state.setState(false);
             }
         };
-
-        document.addEventListener('mousedown', handler);
+        if (state.getState()) {
+            document.addEventListener('mousedown', handler);
+        }
         return () => {
             document.removeEventListener('mousedown', handler);
         }
@@ -25,8 +24,8 @@ export const ExternalReset = ({ state, children }) => {
 
     return (
         <div ref={externalElementRef} className={`${state.getState() ? styles.light : ''}`}>
-            {children}
             <PlugContext.Provider value={state.getState()}>
+                {children}
                 <Plug></Plug>
             </PlugContext.Provider>
         </div>

@@ -30,6 +30,9 @@ interface LogoContextType {
     logo: string
 }
 
-interface TextInputContextType {
+interface SearchBoxContextType {
+    trigger: boolean,
+    keywords: Array<string>,
     setValue: React.Dispatch<React.SetStateAction<string>>,
+    value: string,
 }

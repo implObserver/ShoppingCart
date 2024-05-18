@@ -1,15 +1,19 @@
 .container__result {
-    display: grid;
+    display: none;
+}
+
+.open {
+    display: block;
     background-color: white;
     z-index: 20;
-    border: 1px black solid;
     border-radius: 7px;
+    height: min-content;
 }
 
 .container__result>ul {
     appearance: none;
     list-style: none;
-    padding: 15px 10px;
+    height: min-content;
 }
 
 .container__result>ul>li {

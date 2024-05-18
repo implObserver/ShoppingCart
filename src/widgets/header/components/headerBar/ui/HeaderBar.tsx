@@ -11,7 +11,7 @@ export const HeaderBar = () => {
 
     return (
         <ExternalReset state={dropdownStatus}>
-            <div className={`${styles.bar__header} ${dropdownStatus.getState() ? styles.light : ''}`}>
+            <div className={styles.bar__header}>
 
                 <TriggerContext.Provider value={dropdownStatus}>
                     <Bar></Bar>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { usePlugContext } from '../lib/context/Context'
 import styles from './styles/Plug.module.css'
 

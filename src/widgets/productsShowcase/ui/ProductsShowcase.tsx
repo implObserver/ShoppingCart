@@ -1,8 +1,11 @@
 import { ProductContext } from "@/entities/product"
 import { ProductWidget } from "../components/product"
 import styles from './styles/ProductShowcase.module.css'
+import { useDefaultContext } from "@/shared/lib"
 
-export const ProductsShowcase = ({ products }) => {
+export const ProductsShowcase = () => {
+    const products = useDefaultContext('productsContext');
+    
     const fill = () => {
         return products.map((example: ProductContextType) => {
             return (

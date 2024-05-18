@@ -1,5 +1,5 @@
-import { getFavourites } from "../../api/localStorage/getFavourites";
+import { loadFavourites } from "../../api/localStorage/loadFavourites";
 
 export const initialState: Favorites = {
-    favorites: getFavourites(),
+    favorites: loadFavourites(),
 }

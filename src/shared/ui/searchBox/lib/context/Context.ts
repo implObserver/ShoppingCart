@@ -1,11 +1,11 @@
 import { createContext, useContext } from "react";
 
-export const TextInputContext = createContext<undefined | TextInputContextType>(undefined);
+export const SearchBoxContext = createContext<undefined | SearchBoxContextType>(undefined);
 
-export const useTextInputContext = () => {
-    const props = useContext(TextInputContext);
+export const useSearchBoxContext = () => {
+    const props = useContext(SearchBoxContext);
     if (props === undefined) {
-        throw new Error('use this context must be used with a TextInputContext');
+        throw new Error('use this context must be used with a SearchBoxContext');
     }
     return props;
 }

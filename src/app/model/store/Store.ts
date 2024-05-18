@@ -1,9 +1,11 @@
+import { keywordsReducer } from '@/entities/searchPanel';
 import { favoritesReducer } from '@/entities/user/components/favorites';
 import { configureStore } from '@reduxjs/toolkit';
 
 export const store = configureStore({
   reducer: {
     favorites: favoritesReducer,
+    keywords: keywordsReducer,
   },
 });
 
