@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 
-export const PlugContext = createContext<undefined | boolean>(undefined);
+export const PlugContext = createContext<undefined | PlugContextType>(undefined);
 
 export const usePlugContext = () => {
     const props = useContext(PlugContext);

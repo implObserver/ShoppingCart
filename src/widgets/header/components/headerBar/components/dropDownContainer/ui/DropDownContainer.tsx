@@ -5,7 +5,7 @@ export const DropDownContainer = () => {
         <div>
             <Dropdown>
                 <div className="settings" style={{
-                    display: "grid",
+                    display: "block",
                     height: '50vh',
                     backgroundColor: 'green',
                 }}>

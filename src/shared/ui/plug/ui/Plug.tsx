@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
 import { usePlugContext } from '../lib/context/Context'
 import styles from './styles/Plug.module.css'
 
 export const Plug = () => {
-    const state = usePlugContext();
+    const context = usePlugContext();
+
     return (
-        <div className={`${state ? styles.plug : ''}`}></div>
+        <div className={`${context.state ? `${styles.plug} ${context.index}` : ''}`}>
+
+        </div>
     )
 }

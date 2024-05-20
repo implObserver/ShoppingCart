@@ -1,4 +1,4 @@
-import { keywordsReducer } from '@/entities/searchPanel';
+import { keywordsReducer } from '@/entities/searchBox';
 import { favoritesReducer } from '@/entities/user/components/favorites';
 import { configureStore } from '@reduxjs/toolkit';
 

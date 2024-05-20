@@ -1,3 +1,7 @@
 .trigger__hamburger {
     border-radius: 7px;
 }
+
+.trigger__hamburger:hover {
+    border: 1px red solid;
+}

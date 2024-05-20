@@ -1,0 +1,23 @@
+.container__result {
+  display: block;
+  width: 404px;
+  background-color: white;
+  border-radius: 7px;
+  z-index: 20;
+}
+
+.container__result>ul {
+    appearance: none;
+    list-style: none;
+    height: min-content;
+}
+
+.container__result>ul>li {
+    border-radius: 7px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.container__result>ul>li:hover {
+    background: #e9f3ff;
+}

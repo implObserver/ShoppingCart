@@ -1,8 +1,8 @@
 import styles from './styles/Hamburger.module.css'
-import { BottomLine } from '../components/bottomLine/ui/BottomLine';
-import { CenterLine } from '../components/centerLine/ui/CenterLine';
-import { TopLine } from '../components/topLine/ui/TopLine';
 import { useHamburgerContext } from '../lib/context/Context';
+import { BottomLine } from '../components/bottomLine';
+import { CenterLine } from '../components/centerLine';
+import { TopLine } from '../components/topLine';
 
 export const Hamburger = () => {
     const status = useHamburgerContext();

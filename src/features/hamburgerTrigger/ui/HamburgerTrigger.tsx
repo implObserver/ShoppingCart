@@ -7,6 +7,7 @@ export const HamburgerTrigger = () => {
 
     const handleClick = (e) => {
         e.stopPropagation();
+        e.preventDefault();
         context.toggle();
     }
 

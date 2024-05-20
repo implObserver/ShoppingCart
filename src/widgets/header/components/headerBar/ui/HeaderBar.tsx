@@ -8,9 +8,9 @@ import { DropDownContainer } from "../components/dropDownContainer";
 
 export const HeaderBar = () => {
     const dropdownStatus = useCustomState();
-
+    console.log('bar')
     return (
-        <ExternalReset state={dropdownStatus}>
+        <ExternalReset state={dropdownStatus} index={'header'}>
             <div className={styles.bar__header}>
 
                 <TriggerContext.Provider value={dropdownStatus}>
