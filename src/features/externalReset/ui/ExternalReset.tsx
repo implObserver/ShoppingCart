@@ -2,21 +2,23 @@ import { Plug } from "@/shared/ui/plug/ui/Plug";
 import { useEffect, useRef } from "react";
 import styles from './styles/ExternalReset.module.css';
 import { PlugContext } from "@/shared/ui/plug";
+import { useExternalResetContext } from "../lib/context/Context";
 
-export const ExternalReset = ({ state, children, index }) => {
+export const ExternalReset = ({ children }) => {
     const externalElementRef = useRef<HTMLDivElement>();
+    const context = useExternalResetContext();
 
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             const element = e.target as HTMLElement;
             if (element.className.includes('plug')) {
-                if (element.className.includes(index)) {
-                    state.setState(false);
+                if (element.className.includes(context.index)) {
+                    context.state.setState(false);
                 }
             }
         };
 
-        if (state.getState()) {
+        if (context.state.getState()) {
             document.addEventListener('mousedown', handler);
         }
 
@@ -26,12 +28,12 @@ export const ExternalReset = ({ state, children, index }) => {
     },)
 
     const plugContext: PlugContextType = {
-        state: state.getState(),
-        index: index,
+        state: context.state.getState(),
+        index: context.index,
     }
 
     return (
-        <div ref={externalElementRef} className={`${state.getState() ? `${styles.light} ${index}` : ''}`}>
+        <div ref={externalElementRef} className={`${context.state.getState() ? `${styles.light} ${context.index}` : ''}`}>
             <PlugContext.Provider value={plugContext}>
                 {children}
                 <Plug></Plug>

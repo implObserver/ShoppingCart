@@ -1,27 +1,33 @@
 import { useCustomState } from "@/shared/lib";
 import { DropdownContext } from "@/shared/ui/dropdown";
 import styles from './styles/Header.module.css'
-import { ExternalReset } from "@/features/externalReset";
+import { ExternalReset, ExternalResetContext } from "@/features/externalReset";
 import { TriggerContext } from "@/features/hamburgerTrigger";
 import { Bar } from "../components/bar";
 import { DropDownContainer } from "../components/dropDownContainer";
 
 export const HeaderBar = () => {
     const dropdownStatus = useCustomState();
-    console.log('bar')
+
+    const externalElementContext: ExternalResetContextType = {
+        state: dropdownStatus,
+        index: 'header',
+    }
+
     return (
-        <ExternalReset state={dropdownStatus} index={'header'}>
-            <div className={styles.bar__header}>
+        <ExternalResetContext.Provider value={externalElementContext}>
+            <ExternalReset>
+                <div className={styles.bar__header}>
+                    <TriggerContext.Provider value={dropdownStatus}>
+                        <Bar></Bar>
+                    </TriggerContext.Provider>
 
-                <TriggerContext.Provider value={dropdownStatus}>
-                    <Bar></Bar>
-                </TriggerContext.Provider>
+                    <DropdownContext.Provider value={dropdownStatus.getState()}>
+                        <DropDownContainer></DropDownContainer>
+                    </DropdownContext.Provider>
+                </div>
+            </ExternalReset>
+        </ExternalResetContext.Provider>
 
-                <DropdownContext.Provider value={dropdownStatus.getState()}>
-                    <DropDownContainer></DropDownContainer>
-                </DropdownContext.Provider>
-
-            </div>
-        </ExternalReset>
     )
 }

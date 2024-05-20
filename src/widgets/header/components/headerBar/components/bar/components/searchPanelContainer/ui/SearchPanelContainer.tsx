@@ -1,11 +1,14 @@
 import { SearchBox } from "@/entities/searchBox";
-import { ExternalReset } from "@/features/externalReset";
+import { ExternalReset, ExternalResetContext } from "@/features/externalReset";
 import { useCustomState } from "@/shared/lib";
 import styles from './styles/SearchPanel.module.css'
 
 export const SearchPanelContainer = () => {
     const isCheck = useCustomState();
-
+    const externalElementContext: ExternalResetContextType = {
+        state: isCheck,
+        index: 'search__box'
+    }
     const clickHandle = (e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -15,9 +18,11 @@ export const SearchPanelContainer = () => {
     return (
         <div className="search__panel__container">
             <div className={styles.container__search__panel} onClick={clickHandle}>
-                <ExternalReset state={isCheck} index={'searchbox'}>
-                    <SearchBox></SearchBox>
-                </ExternalReset>
+                <ExternalResetContext.Provider value={externalElementContext}>
+                    <ExternalReset>
+                        <SearchBox></SearchBox>
+                    </ExternalReset>
+                </ExternalResetContext.Provider>
             </div>
         </div>
     )
